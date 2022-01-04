@@ -6,6 +6,10 @@
 		</title>
 	</head>
 	<body>
-		<h1 th:text = "'Best of 2021 by: ' + ${name}"></h1>		
+		<h1 th:text = "'Best of 2021 by: ' + ${name}"></h1>
+		<h3>Questi sono il link per navigare la pagina </h3>
+		<a th:href="@{'/movies'}"> go to movies</a>
+		<br>
+		<a th:href="@{'/songs'}">go to songs</a>		
 	</body>
 </html>
