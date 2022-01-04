@@ -2,10 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<title>
-			HelloSpringMVC
+			Best Songs 2021
 		</title>
 	</head>
 	<body>
-		<h1 th:text = "'Best of 2021 by: ' + ${name}"></h1>		
+	<h1>List of best Songs</h1>		
+	<ul> 
+		<li th:each="song : ${songs}" th:text="${song}"></li>
+	</ul>
 	</body>
 </html>

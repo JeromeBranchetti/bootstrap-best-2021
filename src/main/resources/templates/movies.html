@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>
+			Best Movies 2021
+		</title>
+	</head>
+	<body>
+		<h1>List of best Movies</h1>	
+		<ul>
+			<li th:each="movie : ${movies}" th:text="${movie}"></li>
+			
+		</ul>	
+	</body>
+</html>
