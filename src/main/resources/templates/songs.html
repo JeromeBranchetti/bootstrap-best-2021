@@ -1,15 +1,30 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
+	<div th:replace="fragments :: head"></div>
 		<title>
 			Best Songs 2021
 		</title>
 	</head>
 	<body>
-	<h1>List of best Songs</h1>		
-	<ul> 
-		<li th:each="song : ${songs}" th:text="${song}"></li>
-	</ul>
-	<a th:href="@{/}">Home button</a>
+	<div th:replace="fragments :: nav"></div>
+	<div class="container">
+		<h1>List of best Songs</h1>		
+			<h1 class="text-center">List of best Movies</h1>	
+			<div class="row">
+				<div class="col-4" th:each="song : ${songs}">
+					<div class="card">
+						<img class="card-img-top" alt="music note" src="/img/pic2.jpg">
+						<div class="card-body">
+							<p class="card-title" th:text ="${song}"></p>
+							<hr>
+							<p class="card-text"> Some info about the movie</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	<div th:replace="fragments :: scripts"></div>
 	</body>
 </html>
